@@ -2,11 +2,18 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background: #030712;
+  font-family: Arial, sans-serif;
+}
+
 .counter-container {
   width: 90%;
   max-width: 500px;
-  margin: 50px auto;
-  padding: 40px 25px;
+  margin: 40px auto;
+  padding: 35px 25px;
+
   text-align: center;
 
   background: #111827;
@@ -26,15 +33,19 @@
   font-size: 90px;
   font-weight: 900;
   line-height: 1;
-  margin: 25px 0;
+
+  margin: 25px 0 10px;
 }
 
 .goal {
   color: #9ca3af;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
+
   margin-bottom: 30px;
 }
+
+/* Progress */
 
 .progress-container {
   width: 100%;
@@ -44,7 +55,7 @@
   border-radius: 20px;
   overflow: hidden;
 
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .progress {
@@ -56,8 +67,72 @@
   transition: width 0.2s ease;
 }
 
+/* Stats */
+
+.stats {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.stats div {
+  flex: 1;
+
+  padding: 12px;
+
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+.stats span,
+.time-info span {
+  display: block;
+
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.stats strong,
+.time-info strong {
+  color: white;
+  font-size: 20px;
+}
+
+/* Rest timer */
+
+.timer-section {
+  margin: 20px 0;
+}
+
+.timer-label {
+  color: #9ca3af;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  margin-bottom: 5px;
+}
+
+.rest-timer {
+  color: #22c55e;
+
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.rest-timer.active {
+  color: #f59e0b;
+}
+
+/* Add button */
+
 .add-btn {
   width: 100%;
+
   padding: 20px;
 
   border: none;
@@ -70,14 +145,61 @@
   font-weight: 900;
 
   cursor: pointer;
+
+  transition: 0.15s;
 }
 
 .add-btn:active {
   transform: scale(0.97);
 }
 
+.add-btn:disabled {
+  background: #374151;
+  color: #9ca3af;
+
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Time */
+
+.time-info {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.time-info div {
+  flex: 1;
+
+  padding: 12px;
+
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+/* Complete */
+
+.complete {
+  margin-top: 20px;
+  padding: 18px;
+
+  background: #14532d;
+  border-radius: 15px;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+/* Reset */
+
 .reset-btn {
-  margin-top: 15px;
+  margin-top: 20px;
+
   padding: 10px 20px;
 
   border: none;
@@ -90,4 +212,44 @@
   font-weight: 700;
 
   cursor: pointer;
+}
+/* Phase information */
+.phase-info {
+  margin: 20px 0;
+  padding: 15px;
+  background: #1f2937;
+  border-radius: 14px;
+}
+
+.phase-info span {
+  display: block;
+  color: #22c55e;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.phase-info strong {
+  display: block;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.phase-info small {
+  display: block;
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.time-expired {
+  margin-top: 20px;
+  padding: 15px;
+  background: #451a03;
+  border-radius: 14px;
+  color: #fbbf24;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5;
 }
